@@ -1,0 +1,84 @@
+$fontOne: "Arial";
+$darkBlue: #000022; 
+$lightBlue: lightblue;
+$yellow: yellow;
+$greyBlue: #005E7C;
+$alignC: text-align center;
+$margin:  60px 130px 20px 135px;
+$marginF: 30px 75px 20px 0px;
+$marginZ: 0px;
+$fontSize: 15px; 
+
+@mixin flexCenter($centerPlacement) {
+    display: flex;
+    justify-content: $centerPlacement;
+    align-items: $centerPlacement;
+}
+
+// Jeg ville gerne have lavet hele det øverste stykke med et billede, men siden der ikke er en header i html'en og vi ikke må ændre det,
+// har jeg valgt kun at sætte det i h1'eren, for at vise idéen. 
+h1 {
+    background-image: url(/science/images/space.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: $marginZ;
+
+}
+body {
+    color: $lightBlue;
+    margin: $margin;
+    background-color: $darkBlue;  
+     font: {
+     family: $fontOne; 
+    
+    }
+}
+
+    h1, h2, h3  {
+        margin: $margin; 
+        text-align: center;
+        color: $greyBlue;
+        font-family:$fontOne; 
+        }
+
+    h4 {
+        color: $greyBlue;
+        font-size: $fontSize;
+    }
+
+    section p {
+        text-align: end;
+        margin: $margin;
+    }
+
+    a {
+       color: $lightBlue; 
+       &:hover{color: lighten($yellow, 35%);}
+       font-weight: bold;
+       font-size: small;
+       
+    }
+
+    ul {
+        list-style-type: none;
+       margin: $marginZ;
+       padding: 0;
+       overflow: hidden;
+       @include flexCenter(center);
+
+    }
+
+    li {
+        display: inline;
+       float: left;
+    }
+
+    li a {
+        display: block;
+        text-decoration: none;
+        padding: 14px 16px;
+    }
+    figure{
+        margin: $marginF;
+    }
+   
