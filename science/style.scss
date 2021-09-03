@@ -6,7 +6,7 @@ $greyBlue: #005E7C;
 $alignC: text-align center;
 $margin:  60px 130px 20px 135px;
 $marginF: 30px 75px 20px 0px;
-$marginZ: 0px;
+$marginZ: 30px 0px, 20px, 0px;
 $fontSize: 15px; 
 
 @mixin flexCenter($centerPlacement) {
@@ -22,6 +22,9 @@ h1 {
     background-repeat: no-repeat;
     background-size: cover;
     margin: $marginZ;
+        text-align: center;
+        color: $greyBlue;
+        font-family:$fontOne;
 
 }
 body {
@@ -34,9 +37,8 @@ body {
     }
 }
 
-    h1, h2, h3  {
-        margin: $margin; 
-        text-align: center;
+    h2, h3  {
+        margin: $marginZ; 
         color: $greyBlue;
         font-family:$fontOne; 
         }
